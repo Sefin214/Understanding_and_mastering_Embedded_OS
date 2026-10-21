@@ -1,0 +1,350 @@
+    1  cd workspace/EOS/
+    2  ls
+    3  ls Day01_08Oct2026_BasicOSCommands/ Day2_09Oct2026_File_Process/
+    4  cat Day2_09Oct2026_File_Process/01_MyFirstSCript.sh 
+    5  mkdir Day03_13Oct2026_ShellScripting_FileSystem
+    6  cp Day2_09Oct2026_File_Process/01_MyFirstSCript.sh Day03_13Oct2026_ShellScripting_FileSystem/
+    7  cd Day03_13Oct2026_ShellScripting_FileSystem/
+    8  clear
+    9  cat 01_MyFirstSCript.sh 
+   10  ls
+   11  ls -l
+   12  bash 01_MyFirstSCript.sh 
+   13  echo $$
+   14  tty
+   15  cat
+   16  cat > cat.out
+   17  echo $?
+   18  ls
+   19  cat cat.out 
+   20  echo $?
+   21  cat nofile
+   22  echo $?
+   23  vi 02_ShellScripting_Constructs.sh
+   24  cp 02_ShellScripting_Constructs.sh 03_ShellScripting_Constructs.sh 
+   25  vi 03_ShellScripting_Constructs.sh 
+   26  cp 03_ShellScripting_Constructs.sh 04_ShellScripting_Constructs.sh 
+   27  vi 04_ShellScripting_Constructs.sh 
+   28  cp 04_ShellScripting_Constructs.sh 05_ShellScripting_Constructs.sh 
+   29  vi 05_ShellScripting_Constructs.sh 
+   30  cp 05_ShellScripting_Constructs.sh 06_ShellScripting_Constructs.sh 
+   31  vi 06_ShellScripting_Constructs.sh 
+   32  clear
+   33  vi 07_Loops.sh
+   34  ls
+   35  vi 07_FileTest.sh
+   36  cp 07_FileTest.sh 08_StringTest.sh 
+   37  vi 08_StringTest.sh 
+   38  vi 09_LogicalOperators.sh
+   39  cp 09_LogicalOperators.sh 10_LogicalOperators.sh 
+   40  vi 10_LogicalOperators.sh 
+   41  cp 10_LogicalOperators.sh 11_LogicalOperators.sh 
+   42  vi 11_LogicalOperators.sh 
+   43  vi 12_LogicalOperators.sh 
+   44  clear
+   45  vi 14_Loops.sh
+   46  cp 14_Loops.sh 15_Loops.sh 
+   47  vi 15_Loops.sh 
+   48  vi 16_ForEachLoop.sh
+   49  vi 17_ForCStyle.sh
+   50  vi 18_MyCat.sh
+   51  ls
+   52  factor 42
+   53  clear
+   54  ls
+   55  mkdir ../Day03_14Oct2026_ShellScripting_FileSystem
+   56  mv ../Day03_14Oct2026_ShellScripting_FileSystem ../Day04_14Oct2026_ShellScripting_FileSystem
+   57  cd ../Day04_14Oct2026_ShellScripting_FileSystem/
+   58  until
+   59  ps -aef | grep cat
+   60  ls /proc/3680/fd -l
+   61  tty
+   62  ls /proc/4275/fd -l
+   63  tty
+   64  clear
+   65  man exec
+   66  ps -aef | grep cat
+   67  ls -l /proc/3680/fd 
+   68  ls -l /proc/4275/fd 
+   69  ps -aef | grep cat
+   70  ls -l /proc/4505/fd 
+   71  clear
+   72  cd workspace/EOS/Day2_09Oct2026_File_Process/
+   73  cd ~/workspace/EOS/Day03_13Oct2026_ShellScripting_FileSystem/
+   74  clear
+   75  ls
+   76  ls -l
+   77  bash 02_ShellScripting_Constructs.sh 
+   78  bash 03_ShellScripting_Constructs.sh 
+   79  man test
+   80  bash 03_ShellScripting_Constructs.sh 
+   81  bash 04_ShellScripting_Constructs.sh 
+   82  whereis cat
+   83  ls -lh /usr/bin
+   84  ls -lh /usr/bin/
+   85  ls -lh /usr/lib/cargo/bin/coreutils/cat 
+   86  vi /usr/lib/cargo/bin/coreutils/cat 
+   87  clear
+   88  ls -l 05_ShellScripting_Constructs.sh 
+   89  bash 05_ShellScripting_Constructs.sh 
+   90  ./05_ShellScripting_Constructs.sh 
+   91  ls -l 05_ShellScripting_Constructs.sh 
+   92  chmod u+x 05_ShellScripting_Constructs.sh 
+   93  id
+   94  ./05_ShellScripting_Constructs.sh 
+   95  ls -l 05_ShellScripting_Constructs.sh 
+   96  bash 06_ShellScripting_Constructs.sh 
+   97  PS1="> "
+   98  clear
+   99  bash 07_FileTest.sh 
+  100  ls -l
+  101  chmod u-r cat.out 
+  102  bash 07_FileTest.sh 
+  103  ls -l cat.out 
+  104  man test
+  105  info test
+  106  ls
+  107  clear; bash 08_StringTest.sh 
+  108  bash 08_StringTest.sh 
+  109  info test
+  110  man expr
+  111  man eval
+  112  man expr
+  113  man exec
+  114  man test
+  115  tty
+  116  ps
+  117  ls -l /proc/4308/fd
+  118  cat > /dev/pts/1
+  119  cd workspace/EOS/Day03_13Oct2026_ShellScripting_FileSystem/
+  120  bash 09_LogicalOperators.sh 
+  121  clear
+  122  bash 10_LogicalOperators.sh 
+  123  bash 10_LogicalOperators.sh First
+  124  bash 10_LogicalOperators.sh First Second
+  125  bash 10_LogicalOperators.sh First Second Third
+  126  bash 10_LogicalOperators.sh First Second Third Fourth
+  127  bash 10_LogicalOperators.sh First Second Third Fourth Fifth
+  128  bash 11_LogicalOperators.sh 
+  129  bash 11_LogicalOperators.sh 11_LogicalOperators.sh 
+  130  bash 11_LogicalOperators.sh 11_LogicalOperators.sh 12_LogicalOperators.sh
+  131  ls
+  132  clear
+  133  bash 12_LogicalOperators.sh 
+  134  clear
+  135  bash 14_Loops.sh 
+  136  Count=10 + 2
+  137  bash 15_Loops.sh 
+  138  clear
+  139  bash 15_Loops.sh 
+  140  bash 16_ForEachLoop.sh 
+  141  bash 17_ForCStyle.sh 
+  142  clear
+  143  bash 18_MyCat.sh 
+  144  ls
+  145  cat cat2.out 
+  146  bash 18_MyCat.sh 
+  147  ps -l
+  148  PS1="Bash_02>"
+  149  echo $$
+  150  exit 
+  151  echo $$
+  152  ps -l
+  153  PS1="Bash01> "
+  154  bash 
+  155  ps -l
+  156  echo $$
+  157  exit
+  158  cd workspace/EOS/Day04_14Oct2026_ShellScripting_FileSystem/
+  159  ls
+  160  ls ../Day03_13Oct2026_ShellScripting_FileSystem/
+  161  clear
+  162  echo $$
+  163  bash
+  164  echo $$
+  165  PS1="TERMINAL 01 \$>
+  166  PS1="TERMINAL 01 \$>
+  167  "
+  168  flatpak install flathub com.wps.office
+  169  sudo apt install flatpak
+  170  flatpak install flathub com.wps.office
+  171  tty
+  172  echo $$
+  173  ls -l /proc/29616/fd
+  174  ps -l
+  175  id
+  176  pwd
+  177  ls
+  178  date
+  179  ps -l
+  180  ps -lf
+  181  date
+  182  cd workspace/EOS/Day04_14Oct2026_ShellScripting_FileSystem/
+  183  clear
+  184  ls -l
+  185  chmod u+x 01_CommandLineArgs.sh 
+  186  ls -l
+  187  /home/ubuntu/workspace/EOS/Day04_14Oct2026_ShellScripting_FileSystem/01_CommandLineArgs.sh 
+  188  ./01_CommandLineArgs.sh 
+  189  ~/workspace/EOS/Day04_14Oct2026_ShellScripting_FileSystem/01_CommandLineArgs.sh 
+  190  echo $HOME
+  191  ./01_CommandLineArgs.sh One Two Three Four
+  192  ./01_CommandLineArgs.sh 
+  193  ./01_CommandLineArgs.sh 1 2 3 4 5 6 7 8 9
+  194  PS1=" \$> "
+  195  clear
+  196  ./01_CommandLineArgs.sh 1 2 3 4 5 6 7 8 9
+  197  ./01_CommandLineArgs.sh 1 2 3 4 5 6 7 8 9 10
+  198  ./01_CommandLineArgs.sh 1 2 3 4 5 6 7 8 9 Ten
+  199  ./01_CommandLineArgs.sh One 2 3 4 5 6 7 8 9 Ten
+  200  ./02_CommandLineArgs.sh One 2 3 4 5 6 7 8 9 Ten
+  201  ./03_CommandLineArgs.sh One 2 3 4 5 6 7 8 9 Ten Eleven Twelve Thirteen Fourteen
+  202  clear
+  203  ./04_CommandLineArgs.sh One 2 3 4 5 6 7 8 9 Ten Eleven Twelve Thirteen Fourteen
+  204  ./05_CommandLineArgs.sh One 2 3 4 5 6 7 8 9 Ten Eleven Twelve Thirteen Fourteen
+  205  ./06_CommandLineArgs.sh One 2 3 4 5 6 7 8 9 Ten Eleven Twelve Thirteen Fourteen
+  206  clear
+  207  pwd
+  208  ls ../Day01_08Oct2026_BasicOSCommands/
+  209  ls
+  210  touch file fileA fileB file1 file2 fileABC file123
+  211  ls
+  212  ls file?
+  213  ls file*
+  214  ls file file1 file123 file2 fileA fileABC fileB
+  215  ls file[0-9]
+  216  ls file[A1] # fileA or file1
+  217  ls file[A1]*
+  218  ls file[A1]+
+  219  touch fileAA file11
+  220  ls
+  221  ls file[A1]+
+  222  ls fileA+
+  223  clear
+  224  ls
+  225  touch filea fileb fileabc
+  226  ls
+  227  ls file[A-Z]
+  228  ls file[a-z]
+  229  ls file[a-zA-Z]
+  230  ls file[a-zA-Z0-9]
+  231  ls file[^0-9]
+  232  vi 07_switchCase.sh
+  233  cp 07_switchCase.sh 08_switchCase.sh 
+  234  vi 08_switchCase.sh 
+  235  clear
+  236  ls
+  237  vi 09_Functions.sh
+  238  cp 09_Functions.sh 10_Functions.sh 
+  239  vi 10_Functions.sh 
+  240  cp 10_Functions.sh 11_Functions.sh 
+  241  vi 11_Functions.sh 
+  242  cp 11_Functions.sh 12_Debugging.sh
+  243  vi 12_Debugging.sh 
+  244  clear
+  245  kill -l
+  246  cat
+  247  ls
+  248  vi 14_SignalHandling.sh
+  249  clear
+  250  ps -a 
+  251  ps -ae
+  252  ps -ae | grep bash
+  253  ps -ael | grep bash
+  254  echo $$
+  255  kill -l
+  256  ps -ael | grep bash
+  257  kill -9 33113
+  258  vi 14_SignalHandling.sh
+  259  ps -aef | grep 14_Sig
+  260  ps -aef | grep bash
+  261  kill -3 29616
+  262  ps -aef | grep bash
+  263  kill -3 33763
+  264  cat 14_SignalHandling.sh 
+  265  kill -l
+  266  ps -aef | grep bash
+  267  kill -15 33763
+  268  kill -l
+  269  pwd
+  270  history
+  271  history > 14Oct2026_history
+  272  pwd
+  273  ls -lh ~/.bash_history* 
+  274  echo $$
+  275  ls /proc/$$/
+  276  vi ~/.bash_history.bak 
+  277  tail ~/.bash_history.bak 
+  278  tail -f ~/.bash_history.bak 
+  279  clear
+  280  exit
+  281  lm
+  282  exit
+  283  lm
+  284  exit
+  285  echo $VAR1
+  286  ps
+  287  ps -l
+  288  exit
+  289  ps -afe | grep 3806
+  290  ps -afe | grep 7058
+  291  ps -afe | grep 3806
+  292  ps -afe | grep 7077
+  293  history > history_21Oct2026_2ndTerminal
+  294  clear
+  295  man pipe
+  296  echo $$
+  297  cd IPC/
+  298  gcc 01_pipe.c -o 01_pipe
+  299  ./01_pipe
+  300  ls
+  301  gcc 01_pipe_demo.c -o 01_pipe_demo
+  302  vi 01_pipe_demo.c 
+  303  gcc 01_pipe_demo.c -o 01_pipe_demo
+  304  ./01_pipe_demo 
+  305  gcc 01_pipe_demo.c -o 01_pipe_demo
+  306  clear
+  307  ./01_pipe_demo 
+  308  vi 01_pipe_demo.c 
+  309  echo $$
+  310  gcc 02_pipe_fork.c -o 02_pipe_fork
+  311  ./02_pipe_fork 
+  312  vi 01_pipe_demo.c 
+  313  vi 02_pipe_fork.c 
+  314  gcc 02_pipe_fork.c -o 02_pipe_fork
+  315  ./02_pipe_fork 
+  316  clear
+  317  gcc 03_pipe_fork2.c -o 03_pipe_fork2
+  318  echo $$
+  319  ./03_pipe_fork2 
+  320  gcc 03_pipe_fork2.c -o 03_pipe_fork2
+  321  clear
+  322  ./03_pipe_fork2 
+  323  ls
+  324  clear
+  325  gcc 04_pipe_commands.c -o 04_pipe_commands
+  326  ./04_pipe_commands 
+  327  gcc 04_pipe_commands.c -o 04_pipe_commands
+  328  clear
+  329  ./04_pipe_commands 
+  330  gcc 04_pipe_commands.c -o 04_pipe_commands
+  331  ./04_pipe_commands 
+  332  gcc 04_pipe_commands.c -o 04_pipe_commands
+  333  clear
+  334  ./04_pipe_commands 
+  335  clear
+  336  gcc 04_pipe_commands.c -o 04_pipe_commands
+  337  ./04_pipe_commands 
+  338  ls
+  339  clear
+  340  VI 04_pipe_commands.c 
+  341  vi 04_pipe_commands.c 
+  342  gcc 04_pipe_commands.c -o 04_pipe_commands
+  343  ./04_pipe_commands 
+  344  clear
+  345  gcc 04_pipe_commands.c -o 04_pipe_commands
+  346  ./04_pipe_commands 
+  347  gcc 04_pipe_commands.c -o 04_pipe_commands
+  348  ./04_pipe_commands 
+  349  ls | wc
+  350  history  > history_21Oct2026_02
