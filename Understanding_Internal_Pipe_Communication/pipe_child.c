@@ -14,31 +14,28 @@ void perr_exit(const char* str) {
 }
 
 int main(int argc, char* argv[]) {
-	int pfd[2];
+	int pfd[2]; //To store file descriptors for pipe
 	int ret = pipe(pfd);
 	if (ret < 0) {
 		perr_exit("pipe error");
 	}
-	const char* str = "hello, world\n";
+
+	const char* str = "hello, world\n";   //Custom string to test
 	pid_t p = fork();
+
 	if (p < 0) {
 		perr_exit("fork error");
 	} else if (p == 0) {  // child
-		getchar();
 		close(pfd[0]);
 		write(pfd[1], str, strlen(str));
-		getchar();
 		close(pfd[1]);
 	} else {  // parent
-		getchar();
 		close(pfd[1]);
 		char buf[128];
 		memset(buf, 0, sizeof(buf));
 		read(pfd[0], buf, sizeof(buf));
 		printf("%s", buf);
-		getchar();
 		close(pfd[0]);
 	}
-	getchar();
 	return 0;
 }

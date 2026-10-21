@@ -15,7 +15,7 @@ int main()
     int fd1[2]; // Used to store two ends of first pipe
     int fd2[2]; // Used to store two ends of second pipe
 
-    char fixed_str[] = " for techance.org";
+    char fixed_str[] = "Hi Hello";
     char input_str[100];
     pid_t p;
 
