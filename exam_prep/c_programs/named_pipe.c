@@ -1,24 +1,25 @@
-#include <stdio.h>
 #include <sys/types.h>
+#include <stdio.h>
 #include <sys/stat.h>
 #include <errno.h>
 
+
 int main(){
-	const char *fifo_name = "my_fifo";
-	int result = mkfifo(fifo_name, 0766);
-	if(-1 == result){
+	int stat = 0;
+	const char *fifo_path = "my_own_pipe";
+	stat = mkfifo(fifo_path, 0666);
+	if(stat == -1){
 		if(errno == EEXIST){
-			printf("Named pipe already exists\n");
-			return -1;
-		}	
+			printf("Named pipe already exists. \n");
+		}
 		else{
-			printf("Error occured while creating the pipe\n");
+			perror("Failed to create a Named pipe");
 			return -1;
 		}
 	}
 	else{
-		printf("Named Pipe Created Successfully\n");
-		return -1;
+		printf("Named pipe created successfully. \n");
 	}
+
 	return 0;
-}
+} 	
